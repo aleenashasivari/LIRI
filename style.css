@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    font-family: 'Georgia', serif;
+    text-align: center;
+  }
+  
+
+  
+  .navbar {
+    background-color: red;
+    border: 8px solid orange;
+    border-radius: 50% 50%;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+  }
+  
+  .brand {
+    font-size: 32px;
+    letter-spacing: 30px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .search {
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  .since {
+    margin-top: 10px;
+    font-size: 14px;
+    color: orange;
+    letter-spacing: 10px;
+  }
+  
