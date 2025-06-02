@@ -68,6 +68,12 @@
     }
 
     /* Seksioni i produkteve tjera */
+
+    html {
+  scroll-behavior: smooth;
+}
+
+
     .product-grid {
       display: flex;
       flex-wrap: wrap;
@@ -76,128 +82,99 @@
       padding: 30px;
     }
 
-    .product-card {
-      width: 200px;
-      height: 260px;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
-    }
+    /* Kontejneri i kartave në qendër */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
 
+/* Kartela */
+.product-card {
+  width: 200px;
+  height: 260px;
+  perspective: 1000px; /* Kjo aktivizon efektin 3D */
+}
 
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transition: opacity 0.3s;
-      backface-visibility: hidden;
-    }
+/* Shtresa e brendshme që rrotullohet */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-    .card-front {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    
-      background-color: white;
-      z-index: 2;
-    }
+/* Rrotullohet kur e prek me maus */
+.product-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
 
-    .card-front img {
-      width: 80%;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
+/* Faqja përpara dhe prapa */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    .card-front h3 {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #333;
-    }
+/* Pamja përpara */
+.card-front {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    .card-back {
-      background-color: #f0f0f0;
-      color: #333;
-      padding: 15px;
-      text-align: center;
-      opacity: 0;
-      z-index: 1;
-    }
+/* Pamja mbrapa */
+.card-back {
+  background-color: #fce4ec;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
 
- 
-      
+/* Stilizime tjera */
+.card-front img {
+  width: 80%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
+.card-front h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
 
-   
-   /* Seksioni i produkteve tjera */
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 30px;
-    }
+.add-to-cart {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .product-card {
-      width: 200px;
-      height: 260px;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
-    }
+.add-to-cart:hover {
+  background-color: #e91e63;
+}
 
-
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transition: opacity 0.3s;
-      backface-visibility: hidden;
-    }
-
-    .card-front {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    
-      background-color: white;
-      z-index: 2;
-    }
-
-    .card-front img {
-      width: 80%;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-
-    .card-front h3 {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #333;
-    }
-
-    .card-back {
-      background-color: #f0f0f0;
-      color: #333;
-      padding: 15px;
-      text-align: center;
-      opacity: 0;
-      z-index: 1;
-    }
-
-    .product-card:hover .card-front {
-      opacity: 0;
-    }
-
-    .product-card:hover .card-back {
-      opacity: 1;
-    }
+.rating {
+  margin-top: 10px;
+  font-size: 18px;
+  color: gold;
+}
