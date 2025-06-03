@@ -128,6 +128,199 @@ body {
       z-index: 1;
     }
 
- 
-      
+ .zbritje-produkte {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff7e6;
+}
 
+.zbritje-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-zbritje {
+  width: 300px;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.card-zbritje:hover {
+  transform: scale(1.03);
+}
+
+.card-zbritje img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h3 {
+  margin: 10px 0;
+  color: #cc5500;
+}
+
+.cmimi {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cmimi .vjetër {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.cmimi .ri {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.pershkrim {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #ffa500;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cc8400;
+}
+
+.banner-zbritje {
+  background-color: #ffe066;
+  color: #5a3700;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #e6b800;
+}
+
+.banner-zbritje a {
+  color: #d35400;
+  text-decoration: none;
+  margin-left: 10px;
+  background-color: #fff2cc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.banner-zbritje a:hover {
+  background-color: #ffcc66;
+}
+
+.zbritje-slider {
+  padding: 40px 20px;
+  background-color: #fff7e6;
+  position: relative;
+  text-align: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  width: 90%;
+  scrollbar-width: none; /* për Firefox */
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* për Chrome/Safari */
+}
+
+.card-zbritje {
+  flex: 0 0 auto;
+  width: 250px;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-zbritje img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-zbritje:hover {
+  transform: scale(1.05);
+}
+
+.card-zbritje .info {
+  padding: 10px;
+}
+
+.vjetër {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.ri {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.shigjete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.shigjete:hover {
+  background-color: #cc8400;
+}
+
+.shigjete.majtas {
+  left: 10px;
+}
+
+.shigjete.djathtas {
+  right: 10px;
+}
+
+.card-zbritje img {
+  width: 100%;         
+  height: 180px;       
+  object-fit: cover;   
+  border-bottom: 1px solid #ddd;
+}
